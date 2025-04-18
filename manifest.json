@@ -2,23 +2,18 @@
   "manifest_version": 3,
   "name": "Проверка сообщений",
   "version": "1.0",
-  "description": "Добавляет опцию в контекстное меню для проверки выделенного текста на локальном сервере. Если проверка возвращает класс, отличный от 3, текст подсвечивается с подсказкой.",
-  "permissions": [
-    "contextMenus",
-    "scripting",
-    "activeTab"
-  ],
-  "host_permissions": [
-    "http://localhost/*"
-  ],
+  "description": "Проверка выделенного текста на фишинг, спам и манипуляции.",
+  "permissions": ["contextMenus", "scripting", "activeTab"],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_end"
+      "js": ["content.js"]
     }
-  ]
+  ],
+  "action": {
+    "default_title": "Проверка сообщений"
+  }
 }
