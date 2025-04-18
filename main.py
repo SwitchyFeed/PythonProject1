@@ -57,4 +57,4 @@ def validate(data: Message):
     label_response = get_label_from_deepseek(text)
     label_json = json.loads(label_response.replace("'", '"'))
     print(label_json)
-    return {"class": int(label_json["label"])}
+    return {"class": label_json["label"]}
