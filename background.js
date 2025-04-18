@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === "check-message") {
     const selectedText = info.selectionText;
-    const SERVER_URL = "https://bad-hedy-zxclwnq-30b32ab8.koyeb.app/validate";
+    const SERVER_URL = "https://electric-zara-switchyfeed-4a33dae6.koyeb.app/validate";
 
     try {
       const response = await fetch(SERVER_URL, {
