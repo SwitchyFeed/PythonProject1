@@ -3,7 +3,6 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import uvicorn
 import requests
 
 API_KEY = "sk-4ac17203bf044f3b9fb922b5270ae975"
